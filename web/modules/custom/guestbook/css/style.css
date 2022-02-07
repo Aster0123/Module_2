@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;700&display=swap');
+.feedback_table {
+  padding: 17px 30px 3px;
+  background-color: hsl(210, 100%, 12%);
+  box-shadow: 0 -4px 16px 1px;
+  margin: 23px 0 10px;
+}
+.feedback_up_part {
+  display: flex;
+  justify-content: space-between;
+}
+.name_avatar {
+  display: flex;
+}
+.feedback_up_part h3 {
+  color: wheat;
+  font-family: 'Inconsolata', monospace;
+  font-size: 15px;
+  font-weight: 600;
+}
+.feedback_end_part h3 {
+  color: wheat;
+  font-family: 'Inconsolata', monospace;
+  font-size: 15px;
+  font-weight: 600;
+}
+.feedback_main_part h4 {
+  color: aliceblue;
+  font-size: 18px;
+}
+.feedback_avatar {
+  margin-right: 20px;
+}
+.feedback_avatar img {
+  width: 50px;
+  height: 50px;
+}
+.feedback_main_part {
+  padding: 10px;
+  background-color: rgb(153, 204, 255, 0.1);
+}
+.feedback_end_part {
+  display: flex;
+  justify-content: space-between;
+}
+.feedback_end_part h4 {
+  margin-right: 20px;
+}
+.email_number {
+  gap: 23px;
+  display: flex;
+}
+.admin_buttons {
+  display: flex;
+  gap: 23px;
+}
+.bookButton a {
+  margin: auto;
+  font-family: 'Inconsolata', monospace;
+  font-size: 15px;
+  font-weight: 600;
+  border-bottom: none;
+}
+.bookButton a:hover {
+  border-bottom: none;
+}
+.bookButton a:active {
+  border-bottom: none;
+}
+.bookButton {
+  margin: auto;
+  width: 95px;
+  height: 33px;
+  display: flex;
+  cursor: pointer;
+  background-color: wheat;
+}
+.guestbook-form {
+  background-color: rgb(153, 204, 255, 0.5);
+  padding: 30px;
+}
+.guestbook-form .form-item label {
+  font-family: 'Inconsolata', monospace;
+  font-size: 16px;
+}
+#edit-submit {
+  height: 31px;
+  width: 110px;
+}
+input {
+  background-color: white;
+}
+
+@media (max-width: 600px) {
+  .feedback_up_part h3 {
+    margin-left: 10px;
+  }
+  .feedback_end_part {
+    margin-bottom: 15px;
+  }
+  .email_number {
+    margin-bottom: 20px;
+    flex-direction: column;
+  }
+  .email_number h3 {
+    margin: auto;
+  }
+  .feedback_end_part {
+    flex-direction: column;
+  }
+}

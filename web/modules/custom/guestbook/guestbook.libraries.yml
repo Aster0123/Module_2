@@ -1,0 +1,4 @@
+guestbook_library:
+  css:
+    theme:
+      css/style.css: {}

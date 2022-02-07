@@ -1,0 +1,65 @@
+<?php
+
+/**
+ * @file
+ * @return mixed
+ *   Implements hook_schema().
+ */
+
+function guestbook_schema(): array {
+  $schema['guestbook'] = [
+    'fields' => [
+      'id' => [
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'name' => [
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => TRUE,
+
+      ],
+      'email' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+
+      ],
+      'number' => [
+        'type' => 'varchar',
+        'length' => 13,
+        'not null' => TRUE,
+
+      ],
+      'feedback' => [
+        'type' => 'varchar',
+        'length' => 1000,
+        'not null' => TRUE,
+      ],
+      'avatar' => [
+        'type' => 'int',
+        'length' => 32,
+        'not null' => FALSE,
+        'default' => 0,
+      ],
+      'image' => [
+        'type' => 'int',
+        'length' => 32,
+        'not null' => FALSE,
+        'default' => 0,
+      ],
+      'date' => [
+        'type' => 'int',
+        'length' => 100,
+        'not null' => TRUE,
+      ],
+    ],
+    'primary key' => [
+      'id',
+    ],
+  ];
+
+  return $schema;
+
+}

@@ -1,0 +1,32 @@
+{{ attach_library('guestbook/guestbook_library') }}
+{{ form }}
+  {% for feedback in list %}
+    <div class="feedback_table">
+      <div class="feedback_up_part">
+        <div class="name_avatar">
+          <div class="feedback_avatar">{{ feedback.avatar }}</div>
+          <h3>{{ feedback.name }}</h3>
+        </div>
+        <h3>{{ feedback.date }}</h3>
+      </div>
+      <div class="feedback_main_part">
+        <h4>{{ feedback.feedback }}</h4>
+        <div class="feedback_image"><a href="{{ file_url(feedback.image['#uri']) }}" target="_blank">{{ feedback.image }}</a></div>
+      </div>
+      <div class="feedback_end_part">
+        <div class="email_number">
+          <h3>{{ feedback.email }}</h3>
+          <h3>{{ feedback.number }}</h3>
+        </div>
+        {% if user.hasPermission('administer nodes') %}
+          <div class="admin_buttons">
+            <div class="bookButton adminBookEdit"><a href='/guest_book/form/{{ feedback.id }}/editBook/'
+                                                   class="use-ajax bookEditBtn" data-dialog-type="modal">Edit</a></div>
+            <div class="bookButton AdminBookDelete"><a href='/guest_book/form/{{ feedback.id }}/deleteBook/'
+                                                     class="use-ajax bookDeleteBtn" data-dialog-type="modal">Delete</a>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  {% endfor %}

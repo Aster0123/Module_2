@@ -1,0 +1,25 @@
+guest.book:
+  path: '/guest_book/form'
+  defaults:
+    _controller: '\Drupal\guestbook\Controller\BookController::content'
+    _title: 'GuestBook'
+  requirements:
+    _permission: 'access content'
+
+delete_button:
+  path: '/guest_book/form/{idBook}/deleteBook'
+  defaults:
+    _form: '\Drupal\guestbook\Form\DeleteBook'
+    _title: 'Do you want to delete this feedback?'
+  requirements:
+    _permission: 'administrator'
+    _role: 'administrator'
+
+edit_button:
+  path: '/guest_book/form/{idBook}/editBook'
+  defaults:
+    _form: '\Drupal\guestbook\Form\EditBook'
+    _title: 'Do you want to edit this feedback?'
+  requirements:
+    _permission: 'administrator'
+    _role: 'administrator'
